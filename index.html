@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Love Letter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+<canvas id="particles" aria-hidden="true"></canvas>
+<div class="cursor" id="cursor" aria-hidden="true">♡</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ STAGE 1 + 2: WELCOME & ENVELOPE ============ -->
+<section class="welcome" id="welcome">
+  <p class="promise">Before you open this, promise me a smile.</p>
+  <button class="envelope" id="envelope" aria-label="Open the sealed letter">
+    <span class="env-glow"></span>
+    <span class="env-body">
+      <span class="env-back"></span>
+      <span class="letter"><span class="letter-inner">
+        <i>for you</i><b>♡</b><u></u><u></u><u class="short"></u>
+      </span></span>
+      <span class="env-front"></span>
+      <span class="env-flap"><span class="seal"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 7.5 2.7c0 5.4-7.5 10-7.5 10z"/></svg></span></span>
+    </span>
+  </button>
+  <p class="await">Your surprise awaits...</p>
+  <span class="hint" aria-hidden="true">⌄</span>
+</section>
+
+<!-- ============ STAGE 3: MAIN EXPERIENCE ============ -->
+<main class="main" id="main" aria-hidden="true">
+
+  <!-- Section 1 — 11/11 -->
+  <section class="story s1">
+    <figure class="photo reveal-img" style="--fb:linear-gradient(160deg,#f6e6cf,#d8a6a1)">
+      <img class="px" src="assets/images/image1.jpg" alt="Soft golden sunlight and delicate flowers" onerror="this.remove()">
+      <span class="stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+    </figure>
+    <div class="text">
+      <h2 class="big reveal">11/11</h2>
+      <p class="reveal">They say you should make a wish at 11:11.<br>So I thought about mine.</p>
+      <p class="reveal">And every little thing I wished for<br>had something of you in it.<br><em>Your smile. Your warmth.</em><br>The way an ordinary moment feels different with you.</p>
+      <p class="reveal">So if you ever wonder what I’m wishing for…</p>
+      <p class="finale" id="finale1" data-type="It’s you.|It’s always you. 🤍">It’s you.<br>It’s always you. 🤍</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+  <!-- Section 2 — The flower -->
+  <section class="story s2 flip">
+    <figure class="photo reveal-img" style="--fb:linear-gradient(160deg,#faebe8,#d8a6a1)">
+      <img class="px" src="assets/images/image2.jpg" alt="A delicate bouquet of pink and white flowers" onerror="this.remove()">
+    </figure>
+    <div class="text center">
+      <p class="flower-line reveal">The prettiest <span class="flw">flower</span> is holding the bouquet.</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>✦</span></div>
+
+  <!-- Section 3 — My favorite place -->
+  <section class="story s3">
+    <figure class="photo reveal-img" style="--fb:linear-gradient(160deg,#e8d7c3,#75434A)">
+      <img class="px" src="assets/images/image3.jpg" alt="Two people walking together, holding hands" onerror="this.remove()">
+      <span class="warm" aria-hidden="true"></span>
+    </figure>
+    <div class="text">
+      <p class="place reveal">My favorite place is next to you. 🤍</p>
+    </div>
+  </section>
+
+  <!-- Ending -->
+  <section class="ending">
+    <svg class="heart reveal" viewBox="0 0 100 90" aria-hidden="true"><path d="M50 82C20 62 6 44 6 28 6 16 15 8 26 8c10 0 19 6 24 15C55 14 64 8 74 8c11 0 20 8 20 20 0 16-14 34-44 54z"/></svg>
+    <p class="reveal">Some wishes are too beautiful to stay wishes. 🤍</p>
+  </section>
+</main>
+
+<!-- Music control -->
+<button class="music" id="music" aria-label="Pause music" hidden>
+  <span class="bars"><i></i><i></i><i></i><i></i></span>
+  <span class="music-msg" id="musicMsg"></span>
+</button>
+<audio id="audio" src="assets/audio/love-song.mp3" preload="auto" loop></audio>
+<script src="js/script.js"></script>
+</body>
+</html>
